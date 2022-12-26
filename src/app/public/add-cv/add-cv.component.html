@@ -1,0 +1,40 @@
+<div class="container">
+<div class="row justify-content-center">
+<div class="text-center mt-5">
+    <form [formGroup]="addForm" (ngSubmit)="add()">
+        <mat-form-field >
+            <mat-label>Name</mat-label>
+            <input matInput name="CvName" formControlName="CvName">
+        </mat-form-field>
+        <br> 
+        <mat-form-field style="margin-left: 10px;margin-right: 10px;">
+            <mat-label>CompanyName</mat-label>
+            <input matInput name="CompanyName" formControlName="CompanyName" >
+        </mat-form-field>
+        <br> 
+        <mat-form-field style="margin-left: 10px;margin-right: 10px;">
+            <mat-label>CityName</mat-label>
+            <input matInput name="CityName" formControlName="CityName" >
+        </mat-form-field>
+        <br>   
+        <mat-form-field style="margin-left: 10px;margin-right: 10px;">
+            <mat-label>CompanyFeild</mat-label>
+            <input matInput name="CompanyFeild" formControlName="CompanyFeild" >
+        </mat-form-field>
+        <br>
+        <mat-form-field style="margin-left: 10px;margin-right: 10px;">
+            <mat-label>Email</mat-label>
+            <input matInput name="Email" formControlName="Email" >
+        </mat-form-field>
+        <br>
+        <mat-form-field style="margin-left: 10px;margin-right: 10px;">
+            <mat-label>PhoneNumber</mat-label>
+            <input matInput name="PhoneNumber" formControlName="PhoneNumber" >
+        </mat-form-field>
+        <br>
+        <button  type="submit" mat-raised-button color="primary">Add</button>       
+    </form>
+</div>
+</div>
+</div>
+
