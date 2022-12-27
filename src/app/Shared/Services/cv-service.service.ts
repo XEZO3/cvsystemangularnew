@@ -23,7 +23,11 @@ export class CvServiceService {
   // }
    addCv(cv:cvVm){
        let url =  env.baseurl+"CV";
-     return this.http.post(url,cv);
+       return this.http.post(url,cv);
+  }
+  showCv(){
+       let url =  env.baseurl+"CV";
+       return this.http.get<any>(url);
   }
   // isLoggedIn(){
   //   let token = localStorage.getItem("Token");

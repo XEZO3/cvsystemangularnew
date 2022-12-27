@@ -5,6 +5,9 @@ const routes: Routes = [
   {
     path:'public',loadChildren:()=>import("./public/public.module").then(x=>x.PublicModule)
   },
+  {
+    path:'admin',loadChildren:()=>import("./admin/admin.module").then(x=>x.AdminModule)
+  },
 
 ];
 
