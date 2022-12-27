@@ -7,11 +7,15 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { CvListComponent } from './cv-list/cv-list.component'
 import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+import { CvfilterComponent } from './cvfilter/cvfilter.component';
 
-
+import { CvComponent } from './cv.component';
 @NgModule({
   declarations: [
-    CvListComponent
+    CvListComponent,
+    CvfilterComponent,
+    CvComponent
   ],
   imports: [
     AdminRoutingModule,
@@ -19,7 +23,8 @@ import {MatTableModule} from '@angular/material/table';
     MatFormFieldModule,
     MatCardModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ]
 })
 export class AdminModule { }

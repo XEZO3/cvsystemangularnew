@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { cvVm } from '../../Models/cv.VM';
+import { cvVm, FilterCv } from '../../Models/cv.VM';
 import { env } from './env';
 
 @Injectable({
@@ -25,8 +25,8 @@ export class CvServiceService {
        let url =  env.baseurl+"CV";
        return this.http.post(url,cv);
   }
-  showCv(){
-       let url =  env.baseurl+"CV";
+  showCv(filter:FilterCv){
+       let url =  env.baseurl+"CV?Name="+filter.Name+"&FullName="+filter.FullName+"&CityName="+filter.CityName+"&Email="+filter.Email+"&PhoneNumber="+filter.PhoneNumber+"&CompanyName="+filter.CompanyName+"&CompanyField="+filter.CompanyField;
        return this.http.get<any>(url);
   }
   // isLoggedIn(){

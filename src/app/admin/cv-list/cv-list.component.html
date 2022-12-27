@@ -1,29 +1,45 @@
-<table mat-table [dataSource]="data" class="mat-elevation-z8">
 
+
+
+<table mat-table [dataSource]="data" class="mat-elevation-z8">
+  <!-- 'FullName', 'City', 'companyName', 'CompanyField','Email','phoneNumber' -->
     
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
+    <ng-container matColumnDef="FullName">
+      <th mat-header-cell *matHeaderCellDef> FullName </th>
       <td mat-cell *matCellDef="let element"> {{element.personal.fullName}} </td>
     </ng-container>
   
     
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <ng-container matColumnDef="City">
+      <th mat-header-cell *matHeaderCellDef> City </th>
+      <td mat-cell *matCellDef="let element"> {{element.exp.city}} </td>
     </ng-container>
   
     
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    <ng-container matColumnDef="companyName">
+      <th mat-header-cell *matHeaderCellDef> companyName </th>
+      <td mat-cell *matCellDef="let element"> {{element.exp.companyName}} </td>
     </ng-container>
   
    
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    <ng-container matColumnDef="CompanyField">
+      <th mat-header-cell *matHeaderCellDef> CompanyField </th>
+      <td mat-cell *matCellDef="let element"> {{element.exp.companyField}} </td>
     </ng-container>
-  
+
+    <ng-container matColumnDef="Email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.personal.email}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="phoneNumber">
+      <th mat-header-cell *matHeaderCellDef> phoneNumber </th>
+      <td mat-cell *matCellDef="let element"> {{element.personal.phoneNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Action">
+      <th mat-header-cell *matHeaderCellDef> action </th>
+      <td mat-cell *matCellDef="let element"> <a><mat-icon>edit</mat-icon></a> <a><mat-icon>delete</mat-icon></a></td>
+    </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>

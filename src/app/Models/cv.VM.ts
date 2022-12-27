@@ -27,3 +27,14 @@ export class Exp{
     City: string|undefined
     CompanyField: string|undefined
 }
+
+export class FilterCv{
+   
+    Name:string =''
+    FullName:string =''
+    CityName: string =''
+    Email:string =''
+    PhoneNumber:string=''
+    CompanyName:string =''
+    CompanyField:string =''
+}
