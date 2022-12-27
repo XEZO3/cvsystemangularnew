@@ -26,8 +26,12 @@ export class CvServiceService {
        return this.http.post(url,cv);
   }
   showCv(filter:FilterCv){
-       let url =  env.baseurl+"CV?Name="+filter.Name+"&FullName="+filter.FullName+"&CityName="+filter.CityName+"&Email="+filter.Email+"&PhoneNumber="+filter.PhoneNumber+"&CompanyName="+filter.CompanyName+"&CompanyField="+filter.CompanyField;
+       let url =  env.baseurl+"CV?Name="+filter?.Name+"&FullName="+filter?.FullName+"&CityName="+filter?.CityName+"&Email="+filter?.Email+"&PhoneNumber="+filter?.PhoneNumber+"&CompanyName="+filter?.CompanyName+"&CompanyField="+filter?.CompanyField;
        return this.http.get<any>(url);
+  }
+  deleteDv(cv:cvVm){
+    let url = env.baseurl+"CV"
+    return this.http.delete<any>(url,{body:cv});
   }
   // isLoggedIn(){
   //   let token = localStorage.getItem("Token");

@@ -1,8 +1,8 @@
- <app-cvfilter (test)="add($event)"></app-cvfilter> 
+ <app-cvfilter (test)="filtering($event)"></app-cvfilter> 
 
-{{tests}}
+
 
 
 
 <!-- <button (click)="add()">zzz</button> -->
-<app-cv-list [tttt]="hello" [filter]="tests"></app-cv-list>
+<app-cv-list  [filter]="filter"></app-cv-list>

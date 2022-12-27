@@ -32,13 +32,17 @@
       <td mat-cell *matCellDef="let element"> {{element.personal.email}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="phoneNumber">
+    <ng-container matColumnDef="phoneNumber2">
       <th mat-header-cell *matHeaderCellDef> phoneNumber </th>
       <td mat-cell *matCellDef="let element"> {{element.personal.phoneNumber}} </td>
     </ng-container>
+    <ng-container matColumnDef="phoneNumber">
+      <th mat-header-cell *matHeaderCellDef> phoneNumber </th>
+      <td mat-cell *matCellDef="let element"> {{element.personal.Id}} </td>
+    </ng-container>
     <ng-container matColumnDef="Action">
       <th mat-header-cell *matHeaderCellDef> action </th>
-      <td mat-cell *matCellDef="let element"> <a><mat-icon>edit</mat-icon></a> <a><mat-icon>delete</mat-icon></a></td>
+      <td mat-cell *matCellDef="let element"> <a><mat-icon>edit</mat-icon></a> <a (click)="deletecv(element)"><mat-icon>delete</mat-icon></a></td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -1,6 +1,6 @@
 export class cvVm{
     Id:number=0
-    Name :string|undefined
+    Name :string =''
     PersonalId:number=0
     ExpId:number=0;
     personal:Personal = new Personal
@@ -16,16 +16,16 @@ export class cvVm{
 export class Personal{
     Id:number=0;
     FullName:string="test1234"
-    CityName: string|undefined
-    Email: string|undefined
-    PhoneNumber: number|undefined 
+    CityName: string=''
+    Email: string=''
+    PhoneNumber: number=0
 }
 
 export class Exp{
     Id:number=0
-    CompanyName: string|undefined
-    City: string|undefined
-    CompanyField: string|undefined
+    CompanyName: string=''
+    City: string=''
+    CompanyField: string=''
 }
 
 export class FilterCv{

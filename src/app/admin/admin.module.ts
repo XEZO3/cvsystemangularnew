@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { CvfilterComponent } from './cvfilter/cvfilter.component';
 
 import { CvComponent } from './cv.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     CvListComponent,
@@ -24,7 +25,9 @@ import { CvComponent } from './cv.component';
     MatCardModule,
     MatButtonModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class AdminModule { }

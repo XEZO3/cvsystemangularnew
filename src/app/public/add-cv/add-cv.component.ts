@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { cvVm } from '../../Models/cv.VM';
 import { CvServiceService } from '../../Shared/Services/cv-service.service';
 
@@ -18,7 +19,7 @@ export class AddCvComponent {
     Email: '',
     PhoneNumber: null,
   }) 
-  constructor(private fb: FormBuilder,private cv:CvServiceService){}
+  constructor(private fb: FormBuilder,private cv:CvServiceService,private route:Router){}
 
   add(){
     this.Form =  new cvVm();
@@ -31,7 +32,7 @@ export class AddCvComponent {
     this.Form.personal.PhoneNumber = this.addForm.value.PhoneNumber as unknown as number
     console.log("heho");
     this.cv.addCv(this.Form).subscribe(respone=>{
-      console.log(respone);
+      this.route.navigate(['show'])
     })
   }
 }
