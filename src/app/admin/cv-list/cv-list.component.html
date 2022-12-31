@@ -1,7 +1,7 @@
 
 
 
-<table mat-table [dataSource]="data" class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <!-- 'FullName', 'City', 'companyName', 'CompanyField','Email','phoneNumber' -->
     
     <ng-container matColumnDef="FullName">
@@ -46,4 +46,6 @@
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
   </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
